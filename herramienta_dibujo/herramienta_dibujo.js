@@ -12,8 +12,8 @@ var rojo = 0;
 var verde = 0;
 var azul = 0;
 
-var col = 0;
-var forma = 0;
+var col = 1;
+var forma = 1;
 
 var v = 30;
 
@@ -28,6 +28,65 @@ function setup() {
   background(180);
 
 }
+
+
+
+
+function mouseClicked()
+{
+    //si oprime el  boton 2 cambia el color por medio de 
+    //variable color col  
+   if (mouseX >= 80 &&
+      mouseX <= (80 + tamBoton) &&
+      mouseY >= 10 &&
+      mouseY <= (10 + tamBoton)) 
+   {
+
+      col = col + 1;
+      print(col);
+
+     
+
+      dibujar = false;
+
+    }
+  
+  if (mouseX > 150 &&
+      mouseX < (150 + tamBoton) &&
+      mouseY > 10 &&
+      mouseY < (10 + tamBoton))
+    //150,10,40,40
+    {
+      dibujar = false;
+      forma = forma + 1;
+      
+      print('forma'+forma);
+      if (forma >= 8) {
+        forma = 0;
+      }
+
+    }
+  
+  
+  
+  
+  
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function draw() {
 
@@ -77,38 +136,31 @@ function draw() {
   rect(298, 22, tamBoton / 2, tamBoton / 6);
 
 
+  
+  
   noStroke();
   noFill();
 
 
 
-  function mouseIsPresed() {
-
-    col++;
-    print(col);
-    noloop();
-  }
+  
 
 
   if (mouseIsPressed == true) {
 
 
 
-    //si oprime el  boton 2 cambia el color por medio de 
-    //variable color col
+   //ESTA SECCION EVITA QUE SE DIBUJE CUANDO SE PRESIONEN LOS BOTONES
 
     if (mouseX >= 80 &&
       mouseX <= (80 + tamBoton) &&
       mouseY >= 10 &&
       mouseY <= (10 + tamBoton)) {
 
-      col = col + 0.5;
-      print(col);
-
-      if (col >= 8) {
+       if(col==10) 
+      {
         col = 0;
       }
-
       dibujar = false;
 
     }
@@ -124,14 +176,10 @@ function draw() {
     //150,10,40,40
     {
       dibujar = false;
-      forma = forma + 1;
-      if (forma >= 8) {
-        forma = 0;
-      }
 
     }
 
-
+   //Fin de La Seccion de Evita Dibujo
 
 
 
@@ -168,36 +216,77 @@ function draw() {
 
 
     //se mira que variable de color esta activa
-    if (col >= 0) {
+    
+    if (col == 1) {
       fill(rojo, verde, azul);
     }
 
 
-    if (col >= 1) {
+    if (col == 2) {
       fill(0);
     }
 
-    if (col >= 2) {
+    if (col == 3) {
       fill(255, 0, 0);
     }
 
-    if (col >= 3) {
+    if (col == 4) {
       fill(0, 255, 0);
     }
 
-    if (col >= 4) {
+    if (col == 5) {
       fill(0, 0, 255);
     }
 
+    
+    if (col == 6) {
+      fill(255, 255, 0);
+    }
+
+    if (col == 7) {
+      fill(0, 255, 255);
+    }
+
+    if (col == 8) {
+      fill (255, 0,255);
+    }
+
+    if (col==9) {
+      fill(0, 0, 255);
+    }
+    
+     if (col == 10) {
+      fill(185, 66, 244);
+    }
+
+    if (col == 11) {
+      fill(0, 255, 255);
+    }
+
+    if (col == 12) {
+      fill (255, 0,255);
+    }
+
+    if (col==13) {
+      fill(0, 0, 255);
+    }
+
+    
+    
+    
+    
+    
+    
+    
 
 
     //se mira que varaible de forma esta activa, por medio del numero
     //variable forma
-    if (forma <= 2 && dibujar == true) {
+    if (forma ==1 && dibujar == true) {
       ellipse(mouseX, mouseY, tamDib, tamDib);
     }
 
-    if (forma <= 4 && forma > 2 && dibujar == true)
+    if (forma == 2 && dibujar == true)
 
     {
       rect(mouseX, mouseY, tamDib, tamDib);
@@ -205,7 +294,7 @@ function draw() {
     }
 
 
-    if (forma <= 6 && forma > 4 && dibujar == true)
+    if (forma == 3 && dibujar == true)
 
     {
 
@@ -216,13 +305,13 @@ function draw() {
     }
 
 
-    if (forma <= 8 && forma > 6 && dibujar == true) {
+    if (forma ==4 && dibujar == true) {
       
       
       
       
       beginShape();
-      vertex(mouseX,mouseY+(tamDib));
+      vertex(mouseX,mouseY);
       vertex(mouseX+20, mouseY+(tamDib));
       vertex(mouseX+20, mouseY+20+(tamDib));
       vertex(mouseX+40, mouseY+20+(tamDib));
@@ -232,7 +321,49 @@ function draw() {
 
 
     }
+    
+    
+    
+    
+    if (forma ==5 && dibujar == true) {
+      
+      
+       beginShape();
+    vertex(mouseX, mouseY);
+    bezierVertex(mouseX, mouseY-20, mouseX+40, mouseY-10, mouseX, 40);
+    vertex(mouseX, mouseY);
+    bezierVertex(mouseX, mouseY-20, mouseX-40, mouseY-10, mouseX, 40);
+    endShape();
+      
+      
+      
+      
+      /* heart.beginShape();
+    heart.vertex(50, 15);
+    heart.bezierVertex(50, -5, 90, 5, 50, 40);
+    heart.vertex(50, 15);
+    heart.bezierVertex(50, -5, 10, 5, 50, 40); 
+    heart.endShape();*/
+      
+      //ellipse((mouseX-11)-tamDib/3, mouseY, 20+tamDib,20+tamDib);
+      //ellipse((mouseX+11)+tamDib/3, mouseY, 20+tamDib,20+tamDib);
+      
 
+
+    }
+
+    
+    if (forma ==6 && dibujar == true) {
+      
+      
+       beginShape();
+    vertex(mouseX, mouseY);
+    bezierVertex(mouseX, mouseY-20, mouseX+40, mouseY-10, mouseX, mouseX-10);
+    vertex(mouseX, mouseY);
+    bezierVertex(mouseX, mouseY-20, mouseX-40, mouseY-10, mouseX, mouseX-10);
+    endShape();
+    }
+    
 
 
     //reset de background, tamaño de dibujo
