@@ -66,12 +66,6 @@ function mouseClicked() {
 
 	}
 
-
-
-
-
-
-
 }
 
 
@@ -98,6 +92,7 @@ function draw() {
 
 	//Boton 1
 
+  strokeWeight(0.5);
 	fill(225);
 	stroke(20);
 
@@ -305,6 +300,7 @@ function draw() {
       strokeWeight(0.2*tamDib)
       line(windowWidth / 2, windowHeight / 2, mouseX, mouseY);
     
+     
 
 		}
 
@@ -332,26 +328,11 @@ function draw() {
 		if (forma == 5 && dibujar == true) {
 
 
-			beginShape();
-			vertex(mouseX, mouseY);
-			bezierVertex(mouseX, mouseY - 20, mouseX + 40, mouseY - 10, mouseX, 40);
-			vertex(mouseX, mouseY);
-			bezierVertex(mouseX, mouseY - 20, mouseX - 40, mouseY - 10, mouseX, 40);
-			endShape();
-
-
-
-
-			/* heart.beginShape();
-    heart.vertex(50, 15);
-    heart.bezierVertex(50, -5, 90, 5, 50, 40);
-    heart.vertex(50, 15);
-    heart.bezierVertex(50, -5, 10, 5, 50, 40); 
-    heart.endShape();*/
-
-			//ellipse((mouseX-11)-tamDib/3, mouseY, 20+tamDib,20+tamDib);
-			//ellipse((mouseX+11)+tamDib/3, mouseY, 20+tamDib,20+tamDib);
-
+			push();
+  translate(mouseX, mouseY);
+  rotate(frameCount / 200.0);
+  star(0, 0, 5, 70, 3);
+  pop();
 
 
 		}
@@ -423,12 +404,34 @@ function draw() {
 
     if (forma == 9 && dibujar == true) {
 
-      strokeWeight(1*tamDib)
+      strokeWeight(0.05*tamDib)
       stroke(random(255),random(255),random(255));
 			line(mouseX, mouseY,0, random(windowHeight));
 			line(mouseX, mouseY,windowWidth, random(windowHeight));
 			
 			
+
+		}
+    
+    
+    if (forma == 10 && dibujar == true) {
+
+     push();
+     translate(mouseX, mouseY);
+     star(0, 0, 30, 70, 9);
+     pop();
+				
+
+		}
+
+    
+     if (forma == 11 && dibujar == true) {
+
+     push();
+     translate(mouseX, mouseY);
+     star(0, 0, 30, 70, 5);
+     pop();
+				
 
 		}
 
@@ -448,8 +451,37 @@ function draw() {
 
 
 	}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ // --------------------------------------------------------------------------------------------------------
 
-
+function star(x, y, radius1, radius2, npoints) {
+  let angle = TWO_PI / npoints;
+  let halfAngle = angle / 2.0;
+  beginShape();
+  for (let a = 0; a < TWO_PI; a += angle) {
+    let sx = x + cos(a) * radius2;
+    let sy = y + sin(a) * radius2;
+    vertex(sx, sy);
+    sx = x + cos(a + halfAngle) * radius1;
+    sy = y + sin(a + halfAngle) * radius1;
+    vertex(sx, sy);
+  }
+  endShape(CLOSE);
+}
 
 
 
