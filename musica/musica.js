@@ -91,7 +91,6 @@ function draw() {
      
   noStroke();
       fill(random(0,100),random(0,180),random(0,255));
-      
   for (let i = 0; i < 10; i ++) {
    
     
@@ -130,5 +129,10 @@ function draw() {
   }
    pop()
   }
- 
+  
+  
+  
+  
+
+  
 }
