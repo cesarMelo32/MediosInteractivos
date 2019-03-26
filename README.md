@@ -7,4 +7,4 @@
 5. [Snake Juego](https://cesarmelo32.github.io/MediosInteractivos/snake_abejas/) / [Codigo](https://github.com/cesarMelo32/MediosInteractivos/blob/master/snake_abejas/snake_abejas.js)
 6. [Reloj](https://cesarmelo32.github.io/MediosInteractivos/reloj/) / [Codigo](https://github.com/cesarMelo32/MediosInteractivos/blob/master/reloj/reloj.js)
 7. [Musica](https://cesarmelo32.github.io/MediosInteractivos/musica/) / [Codigo](https://github.com/cesarMelo32/MediosInteractivos/blob/master/musica/sketch.js)
-8. [Animales](https://cesarmelo32.github.io/MediosInteractivos/Especias%20viviendo%20juntas/) / [Codigo](https://github.com/cesarMelo32/MediosInteractivos/blob/master/musica/sketch.js)
+8. [Animales](https://cesarmelo32.github.io/MediosInteractivos/Especias%20viviendo%20juntas/) / [Codigo](https://github.com/cesarMelo32/MediosInteractivos/blob/master/Especias%20viviendo%20juntas/sketch.js)
