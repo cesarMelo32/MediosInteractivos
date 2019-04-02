@@ -232,7 +232,7 @@ function draw() {
     for (v = 0; v < cantaraña; v++) {
       if (losalto[i].estaViva==true) {
         
-        if (dist(losalto[i].miX, losalto[i].miY, arañas[v].miX, arañas[v].miY) < 70) {
+        if (dist(losalto[i].miX, losalto[i].miY, arañas[v].miX, arañas[v].miY) < 40) {
 
           losalto[i].miX = arañas[v].miX;
           losalto[i].miY = arañas[v].miY;
