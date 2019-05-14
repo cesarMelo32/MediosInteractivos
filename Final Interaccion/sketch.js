@@ -357,11 +357,10 @@ function draw() {
     
     
     
-    //posicion y texto del boton de reinicio
+ //posicion y texto del boton de reinicio
     tamBot = 80;
-    botx = width / 2 - (tamBot * 1.8);
-    boty = width/2+ 200;
-
+    botx = width / 2 - (tamBot * 1.8)
+    boty = width / 2 + width/2;
 
 
     //boton de reinicio
