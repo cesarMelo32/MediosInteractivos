@@ -793,12 +793,9 @@ for(w=0;w<numFilas1;w++)
 
   //se comprueba en cualquier momento touch() toca el boton de reinicio
   
-  
-  
-   for (var h = 0; h < touches.length; h++) {
-
-    touchX= touches[h].x;
-    touchY= touches[h].y;
+   for (h = 0; h < touches.length; h++) {
+var touchX= touches[h].x;
+    var touchY= touches[h].y;
      
   
   if (dist(touchX, touchY, botx+tamBot, boty+tamBot) < tamBot - 10){
