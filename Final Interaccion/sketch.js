@@ -801,7 +801,7 @@ for(w=0;w<numFilas1;w++)
     touchY= touches[h].y;
      
   
-  if (dist(mouseX, mouseY, botx+tamBot, boty+tamBot) < tamBot - 10){
+  if (dist(touchX, touchY, botx+tamBot, boty+tamBot) < tamBot - 10){
 
     
     if(estadoGeneral==1||estadoGeneral==3)
