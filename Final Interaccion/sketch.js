@@ -284,10 +284,10 @@ function draw() {
     //if (dist(touches[j].x, touches[j].y, botx, boty) < 20) {
 
     
-    for ( i = 0; i < touches.length; i++) {
+    for ( var t = 0; t < touches.length; t++) {
 
-      var touchX= touches[i].x;
-      var touchY= touches[i].y;
+      var touchX= touches[t].x;
+      var touchY= touches[t].y;
   
     if (touchX >= (width / 2 + ((tamBot * 5) / 2)) &&
       touchX <= (width / 2 + ((tamBot * 5) / 2) + tamBot * 5) &&
