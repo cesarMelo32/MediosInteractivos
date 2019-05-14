@@ -281,14 +281,18 @@ function draw() {
    
     
     
-    //if (dist(touches[j].x, touches[j].y, botx, boty) < 20) {
-
     
+    if(touches.lenght!=0)
+    {
     for ( var t = 0; t < touches.length; t++) {
 
       var touchX= touches[t].x;
       var touchY= touches[t].y;
-  
+     }
+    }
+    
+    
+    
     if (touchX >= (width / 2 + ((tamBot * 5) / 2)) &&
       touchX <= (width / 2 + ((tamBot * 5) / 2) + tamBot * 5) &&
       touchY >= (height / 2 - ((tamBot * 5) / 2)) &&
@@ -323,7 +327,7 @@ function draw() {
     }
 
 
-  }
+  
     
     
     //texto que acompaña a cada boton de las opciones de busqueda
